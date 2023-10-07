@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: log4j
+      initial-size: 5
+      min-idle: 5
+      stat-view-servlet:
+        enabled: true
+#        还需要在设置里面配置自动构建
+  devtools:
+    restart:
+      # 开启热部署（更改文件后，自动重启）
+      enabled: true
+      ## 设置哪些资源变动后不触发热部署，会覆盖默认的exclude内容（资源不会触发重启，但会触发实时重新加载）
+      # exclude: WEB-INF/**,static/**
+      ## 监控额外的路径（优先于exclude）
+      # additional-paths: src/main/java
+      additional-paths: src/main/java
+  thymeleaf:
+#    prefix: classpath/thmplates/
+#    suffix: .html
+    cache: false
+# 允许所有请求访问
+# security.basic.enabled=false
+
+
+
+
+#
+#    #配置监控统计拦截的filters，stat：监控统计、log4j：日志记录、wall：防御sql注入
+#    #如果允许报错，java.lang.ClassNotFoundException: org.apache.Log4j.Properity
+#    #则导入log4j 依赖就行
+
+server:
+  port: 8081
+mybatis:
+  type-aliases-package: com.example.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+#    开启下划线自动转驼峰
+    map-underscore-to-camel-case: true
+
+
+
+
