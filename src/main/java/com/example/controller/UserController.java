@@ -39,6 +39,10 @@ public class UserController {
     public List<User> queryUserList() {
         return userMapper.queryUserList();
     }
+//    测试优选
+    public void GitCheeryTest(){
+        System.out.println("GitCheeryTest");
+    }
 
 
 //返回查询结果的json字符串
