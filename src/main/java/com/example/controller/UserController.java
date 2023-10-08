@@ -44,6 +44,11 @@ public class UserController {
         System.out.println("GitCheeryTest");
     }
 
+    //    第五次修改
+    public void gitTest() {
+        System.out.println("test");
+    }
+
 
 //返回查询结果的json字符串
 //    @RequestMapping("/{name}")
