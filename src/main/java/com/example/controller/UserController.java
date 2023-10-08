@@ -34,13 +34,16 @@ public class UserController {
 
     }
 
-        @ResponseBody
+    @ResponseBody
     @RequestMapping("/all")
-    public List<User> queryUserList(){
-       return userMapper.queryUserList();
+    public List<User> queryUserList() {
+        return userMapper.queryUserList();
     }
 
-
+    //    第五次修改
+    public void gitTest() {
+        System.out.println("test");
+    }
 
 
 //返回查询结果的json字符串
