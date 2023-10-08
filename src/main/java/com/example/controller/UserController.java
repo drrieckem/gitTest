@@ -39,12 +39,6 @@ public class UserController {
     public List<User> queryUserList() {
         return userMapper.queryUserList();
     }
-//    测试git的改变
-    public List<User> GitUpdateTest()
-
-    {
-        return null;
-    }
 
 
 //返回查询结果的json字符串
